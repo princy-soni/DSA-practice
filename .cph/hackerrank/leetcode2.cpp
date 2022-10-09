@@ -4,7 +4,7 @@ int solve(int nums[], int size)
 {
     int count = 0;
     sort(nums[0], nums[size - 1]);
-    for (int i = nums[size - 2]; i < size; i++)
+    for (int i = nums[size - 2]; i <nums[size]; i++)
     {
         if (nums[i] < nums[i + 1])
         {
@@ -12,17 +12,18 @@ int solve(int nums[], int size)
         }
         if (count == 3)
         {
-            return count;
+            return nums[i];
         }
         else
             return nums[size - 1];
     }
+}
 
     int main()
     {
         int size;
         cin >> size;
-        int nums[];
+        int nums[size];
         for (int i = 0; i < size; i++)
         {
             cin >> nums[size];
