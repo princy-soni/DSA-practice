@@ -6,7 +6,11 @@ int main(){
     m[5]="cdc";
     m[3]="gfh";
     m.insert({4,"fgh"});
-    for (auto &pr: m){
-        cout<<pr.first<<"  "<<pr.second<<endl;
-    }
+auto it =m.find(6);
+if (it==m.end()){
+    cout<<"NO value";
+}
+else{
+    cout<<(*it).first<<"    "<<(*it).second;
+}
 }
