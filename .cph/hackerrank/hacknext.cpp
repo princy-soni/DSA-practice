@@ -13,12 +13,12 @@ void mypairs(vector<int> &arr)
         {
             min = diff[i];
         }
+    }
         for (int i = 1; i < arr.size(); i++)
         {
             if (diff[i] == min)
                 cout << arr[i - 1] << " " << arr[i] << endl;
         }
-    }
 }
 
 int main()
